@@ -61,6 +61,14 @@ class Plugin extends PluginBase
                 'cdn' => function ($path) {
                     return (new TwigExtension)->cdn($path);
                 },
+            ],            
+            'filters' => [
+                'asset_cdn' => function ($path) {
+                    return (new TwigExtension)->assetCdn($path);
+                },
+                'cdn' => function ($path) {
+                    return (new TwigExtension)->cdn($path);
+                },
             ]
         ];
     }
